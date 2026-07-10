@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.btn {
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+.btnPrev {
+  background-color: #343a40;
+  cursor: pointer;
+}
+
+.btnPrev:hover {
+  background-color: #212529;
+}
+
+.btnNext {
+  background-color: #ff8c00;
+  cursor: pointer;
+}
+
+.btnNext:hover {
+  background-color: #e07b00;
+}
+
+.btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pageInfo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: #ffffff;
+  background-color: #212529; 
+  padding: 8px 16px;
+  border-radius: 20px;     
+  border: 1px solid #ff8c00; 
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .pageInfo {
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
+}

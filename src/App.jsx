@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Pagination from "./components/Pagination";
 import CharacterList from "./components/CharacterList";
 
 function App(){
@@ -33,6 +34,7 @@ function App(){
   return (
     <div  className="app-container">
     <div>
+    <Pagination page={page} setPage={setPage} />
     <CharacterList characters={characters}/>
     </div>
     </div>
