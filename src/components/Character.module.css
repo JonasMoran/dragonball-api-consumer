@@ -82,6 +82,33 @@
   font-family: sans-serif;
 }
 
+.badgeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.saiyan { background-color: #ffe8cc; color: #d97706; }
+.namekian { background-color: #d1fae5; color: #065f46; }
+.human { background-color: #fee2e2; color: #991b1b; }
+.android { background-color: #c2c6fd; color: #02476d; }
+.friezaRace { background-color: #f3e8ff; color: #6b21a8; }
+.god { background-color: #fef3c7; color: #92400e; }
+.defaultRace { background-color: #f3f4f6; color: #374151; }
+.angel { background-color: #ff96a4; color: #1b0508; }
+.majin { background-color: #ffc8ff; color: #390c3d; }
+
+.male { background-color: #e1f5fe; color: #0288d1; }
+.female { background-color: #fce7f3; color: #9d174d; }
+
 @media (max-width: 600px) {
   .card{
     max-width: 85%;
