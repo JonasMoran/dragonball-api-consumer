@@ -3,6 +3,7 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import CharacterList from "./components/CharacterList";
+import Footer from "./components/Footer";
 
 function App(){
   const [characters, setCharacters] = useState([]);
@@ -39,6 +40,8 @@ function App(){
     <Pagination page={page} setPage={setPage} />
     <CharacterList characters={characters}/>
     </div>
+
+      <Footer />
     </div>
     )
 }
