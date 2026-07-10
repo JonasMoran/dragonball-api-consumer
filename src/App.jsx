@@ -4,12 +4,15 @@ import Navbar from "./components/Navbar";
 import Pagination from "./components/Pagination";
 import CharacterList from "./components/CharacterList";
 import Footer from "./components/Footer";
+import Modal from "./components/Modal";
 
 function App(){
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
+
   useEffect(() => {
     async function fetchData() {  
       try {
@@ -38,12 +41,12 @@ function App(){
     <div>
     <Navbar />
     <Pagination page={page} setPage={setPage} />
-    <CharacterList characters={characters}/>
+    <CharacterList characters={characters} onSelectCharacter={setSelectedCharacter} />
     </div>
-
+    <Modal character={selectedCharacter} onClose={() => setSelectedCharacter(null)} />
       <Footer />
     </div>
-    )
+    );
 }
 
 export default App;
